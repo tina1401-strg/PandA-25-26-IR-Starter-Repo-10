@@ -1,0 +1,21 @@
+PandA IR — Part 6 (PoetryDB + Caching + Timing)
+Type :help for commands. Type :quit to exit.
+Loaded sonnets from the cache.
+Loading sonnets took: 0.814 [ms]
+Loaded 154 sonnets.
+> summer left
+1 out of 154 sonnets contain "summer left". Your query took 9.35ms.
+
+[1/154] Sonnet 5: Those hours, that with gentle work did frame
+  [ 5] For never-resting time leads \x1b[30m\x1b[43msummer\x1b[0m on
+  [ 9] Then were not \x1b[30m\x1b[43msummer\x1b[0m's distillation \x1b[30m\x1b[43mleft\x1b[0m,
+> :hl-mode GREEN
+Highlight mode set to GREEN
+> summer left
+1 out of 154 sonnets contain "summer left". Your query took 8.93ms.
+
+[1/154] Sonnet 5: Those hours, that with gentle work did frame
+  [ 5] For never-resting time leads \x1b[1;92msummer\x1b[0m on
+  [ 9] Then were not \x1b[1;92msummer\x1b[0m's distillation \x1b[1;92mleft\x1b[0m,
+> :quit
+Bye.
