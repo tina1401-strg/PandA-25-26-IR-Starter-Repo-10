@@ -23,19 +23,10 @@ the `app` module itself, or a new module.
         highlighting variant and pass it on to the ``ansi_highlight`` method.
     3. Move `save_config` into the `Configuration` class and rename it.
 
-1.  In preparation for our next part (in 2026), we extract the search behavior into a 
-    separate class. Basically, this is everything that's happening from lines
-    231 to 257 in `app.py`. The part that we timed. Think of a class name, 
-    and in which module to move it. You will have to pass the list of sonnets to that
-    class to be able to search them.
+1. In preparation for the next part (in 2026), we will extract the search behavior into a separate class—most likely with a single method. Concretely, this includes everything that happens between lines 231 and 257 in ``app.py``: the part that we timed.
 
-    Then, you will add a method (again, choose a good name) that does the search and
-    returns the list of `SearchResult`s that are printed at the end.
+Think of a good name for this class and decide in which module it should live. You will need to pass the list of sonnets to this class so it can use them during the search.
 
-    This method most likely will need two parameters: The ``query`` from the user (a string), and the current
-    ``search_mode`` (also a string), so your class knows how to combine results for multiple words.
+Also choose a good name for the method. The method will most likely need two parameters: the user’s ``query`` (a string) and the current ``search_mode`` (also a string), so the class knows how to combine results for multiple words. It should return the list of ``SearchResult``s that are printed at the end of ``app.py``.
 
-2.  Now that we have three settings, you see that a lot of code is duplicated.
-    Try to find a way of  that code into a new class. Find a good name for it and
-    use it three times for each of the settings! This class, like the one above will contain one method
-    in which you check whether the user changes the corresponding setting. 
+2. Now that we have three settings, you can see that much of the code that handles user input is duplicated. Try to find a way to move this code into a new class as well. Like the previous class, this one will most likely consist of a single method containing the duplicated logic. Use three instances of this class to represent the individual settings.
