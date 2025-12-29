@@ -20,7 +20,3 @@ Notes:
   - Load Shakespeare's sonnets via PoetryDB (with local caching)
   - Print how long loading and each query took
 """
-
-POETRYDB_URL = "https://poetrydb.org/author,title/Shakespeare;Sonnet"
-
-CACHE_FILENAME = "sonnets.json"
